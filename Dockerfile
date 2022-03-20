@@ -1,5 +1,4 @@
 # @(#) Dockerfile
-# usage : $ docker build -t edicom/base -t latest .
 FROM node:14-alpine
 
 # Create app directory
@@ -14,15 +13,13 @@ COPY package.json /usr/src/app/package.json
 COPY tsconfig.build.json /usr/src/app/tsconfig.build.json
 RUN npm install
 
-RUN addgroup -S edicom && adduser -S edicom -G edicom    
+RUN addgroup -S celebrand && adduser -S celebrand -G celebrand    
 
 # Bundle app source
-RUN npm install
 RUN npm run build-ci
-COPY /dist /usr/src/app/dist
-RUN chown -R edicom:edicom /usr/src/app && ls -la
+RUN chown -R celebrand:celebrand /usr/src/app && ls -la
 
-USER edicom
+USER celebrand
 WORKDIR /usr/src/app
 
 EXPOSE 8080
