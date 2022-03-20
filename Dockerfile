@@ -11,7 +11,6 @@ RUN pwd
 # Install app dependencies
 COPY .envprod /usr/src/app/.env
 COPY package.json /usr/src/app/package.json
-COPY ecosystem.config.js /usr/src/app/ecosystem.config.js
 RUN npm install
 
 RUN addgroup -S edicom && adduser -S edicom -G edicom    
