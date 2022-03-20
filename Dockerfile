@@ -23,4 +23,4 @@ USER celebrand
 WORKDIR /usr/src/app
 
 EXPOSE 8080
-ENTRYPOINT [ "npm", "run", "prod" ]
+ENTRYPOINT [ "npm", "run", "start:prod" ]
