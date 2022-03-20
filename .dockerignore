@@ -1,5 +1,7 @@
 *
 !.env
+!.envprod
 !package.json
 !ecosystem.config.js
+!tsconfig.build.json
 !dist/*

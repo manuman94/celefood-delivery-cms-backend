@@ -11,6 +11,7 @@ RUN pwd
 # Install app dependencies
 COPY .envprod /usr/src/app/.env
 COPY package.json /usr/src/app/package.json
+COPY tsconfig.build.json /usr/src/app/tsconfig.build.json
 RUN npm install
 
 RUN addgroup -S edicom && adduser -S edicom -G edicom    
