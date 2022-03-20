@@ -1,6 +1,7 @@
 # @(#) Dockerfile
 FROM node:14-alpine
 
+RUN pwd
 # Create app directory
 RUN mkdir -p /usr/src/app && chown node:node /usr/src/app
 RUN pwd
