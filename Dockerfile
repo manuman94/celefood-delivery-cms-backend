@@ -21,5 +21,7 @@ RUN chown -R celebrand:celebrand /usr/src/app && ls -la
 USER celebrand
 WORKDIR /usr/src/app
 
+ADD .envprod .env
+
 EXPOSE 8080
 ENTRYPOINT [ "npm", "run", "start:prod" ]
