@@ -9,9 +9,7 @@ WORKDIR /usr/src/app
 RUN pwd
 
 # Install app dependencies
-COPY .envprod /usr/src/app/.env
-COPY package.json /usr/src/app/package.json
-COPY tsconfig.build.json /usr/src/app/tsconfig.build.json
+COPY . .
 RUN npm install
 
 RUN addgroup -S celebrand && adduser -S celebrand -G celebrand    
