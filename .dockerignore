@@ -1,0 +1,5 @@
+*
+!.env
+!package.json
+!ecosystem.config.js
+!dist/*
