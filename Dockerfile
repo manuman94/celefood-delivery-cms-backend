@@ -16,6 +16,8 @@ RUN npm install
 RUN addgroup -S edicom && adduser -S edicom -G edicom    
 
 # Bundle app source
+RUN npm install
+RUN npm run build-ci
 COPY /dist /usr/src/app/dist
 RUN chown -R edicom:edicom /usr/src/app && ls -la
 
